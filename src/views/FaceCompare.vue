@@ -161,7 +161,7 @@ const responseDrawImage = () => {
       ctx2.drawImage(image2, 0, 0, image2.width, image2.height)
 
 
-      axios.post("/compareFaces",
+      axios.post("/faceCompare",
           {
             image1: canvas1.toDataURL("image/jpeg"),
             image2: canvas2.toDataURL("image/jpeg")

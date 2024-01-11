@@ -4,7 +4,7 @@
       <el-aside class="aside">
         <div class="head">
           <div>
-            <span>人脸识别系统</span>
+            <span>实验室人员管理系统</span>
           </div>
         </div>
         <div class="line"/>
@@ -17,18 +17,18 @@
         >
           <el-submenu index="1">
             <el-menu-item-group>
-              <el-menu-item index="/faceDetect">
+              <el-menu-item index="/faceCapture">
                 <el-icon>
                   <Avatar/>
                 </el-icon>
-                人脸检测
+                人脸录入
               </el-menu-item>
-              <el-menu-item index="/faceCompare">
+              <!-- <el-menu-item index="/faceCompare">
                 <el-icon>
                   <User/>
                 </el-icon>
                 人脸相似度
-              </el-menu-item>
+              </el-menu-item> -->
               <el-menu-item index="/faceRecognition">
                 <el-icon>
                   <Cherry/>

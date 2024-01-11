@@ -7,7 +7,7 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/FaceDetect.vue")
     },
     {
-        path: '/faceDetect',
+        path: '/faceCapture',
         component: () =>import("@/views/FaceDetect.vue")
     },
     {
