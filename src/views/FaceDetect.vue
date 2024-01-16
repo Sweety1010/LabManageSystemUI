@@ -50,7 +50,7 @@
               </el-form-item>
 
               <!-- 年级 -->
-              <el-form-item label="&nbsp&nbsp年级：" prop="grade">
+              <!-- <el-form-item label="&nbsp&nbsp年级：" prop="grade">
                 <el-select v-model="formValues.grade" placeholder="请选择年级：">
                   <el-option label="大一" value="大一"></el-option>
                   <el-option label="大二" value="大二"></el-option>
@@ -60,7 +60,7 @@
                   <el-option label="研二" value="研二"></el-option>
                   <el-option label="研三" value="研三"></el-option>
                 </el-select>
-              </el-form-item>
+              </el-form-item> -->
 
               <!-- 入学年份 -->
               <el-form-item label="入学年份:" prop="enrollmentYear">
@@ -241,8 +241,11 @@ const formRules = {
   sex: [
     {required: true, message: '性别不能为空', trigger:'blur'}
   ],
-  grade: [
-    {required: true, message: '年级不能为空', trigger: 'blur'}
+  // grade: [
+  //   {required: true, message: '年级不能为空', trigger: 'blur'}
+  // ],
+  enrollmentYear: [
+    {required: true, messsage: '入学年份', trigger: 'blur'}
   ],
   province: [
     {required: true, message: '省份不能为空', trigger: 'blur'}
@@ -252,32 +255,32 @@ const formRules = {
 /**
  * 自动填充入学年份
  */
-watch( () => formValues.value.grade, (newValue) => {
-    switch(newValue){
-      case '研三':
-        formValues.value.enrollmentYear = 2021;
-        break;
-      case '研二':
-        formValues.value.enrollmentYear = 2022;
-        break;
-      case '研一':
-        formValues.value.enrollmentYear = 2023;
-        break;
-      case '大四':
-        formValues.value.enrollmentYear = 2024;
-        break;
-      case '大三':
-        formValues.value.enrollmentYear = 2025;
-        break;
-      case '大二':
-        formValues.value.enrollmentYear = 2026;
-        break;
-      case '大一':
-        formValues.value.enrollmentYear = 2027;
-        break;
-    }
-  }
-);
+// watch( () => formValues.value.grade, (newValue) => {
+//     switch(newValue){
+//       case '研三':
+//         formValues.value.enrollmentYear = 2021;
+//         break;
+//       case '研二':
+//         formValues.value.enrollmentYear = 2022;
+//         break;
+//       case '研一':
+//         formValues.value.enrollmentYear = 2023;
+//         break;
+//       case '大四':
+//         formValues.value.enrollmentYear = 2024;
+//         break;
+//       case '大三':
+//         formValues.value.enrollmentYear = 2025;
+//         break;
+//       case '大二':
+//         formValues.value.enrollmentYear = 2026;
+//         break;
+//       case '大一':
+//         formValues.value.enrollmentYear = 2027;
+//         break;
+//     }
+//   }
+// );
 
 /**
  * 表单提交
@@ -307,9 +310,16 @@ const handleSubmit = () => {
   }
 
   // 检查年级逻辑
-  if(formValues.value.grade == ''){
-    console.log("年级不能为空");
-    ElMessageBox.alert('年级不能为空！');
+  // if(formValues.value.grade == ''){
+  //   console.log("年级不能为空");
+  //   ElMessageBox.alert('年级不能为空！');
+  //   return false;
+  // }
+
+    // 检查年级逻辑
+  if(formValues.value.enrollmentYear == ''){
+    console.log("入学年份不能为空");
+    ElMessageBox.alert('入学年份不能为空！');
     return false;
   }
 

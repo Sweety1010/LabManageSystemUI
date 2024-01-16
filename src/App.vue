@@ -17,30 +17,35 @@
         >
           <el-submenu index="1">
             <el-menu-item-group>
+
               <el-menu-item index="/faceCapture">
                 <el-icon>
                   <Avatar/>
                 </el-icon>
                 人脸录入
               </el-menu-item>
-              <!-- <el-menu-item index="/faceCompare">
-                <el-icon>
-                  <User/>
+
+              <el-menu-item index="/studentInfoEdit">
+                <el-icon :size='20'>
+                  <Avatar/>
                 </el-icon>
-                人脸相似度
-              </el-menu-item> -->
+                人员管理
+              </el-menu-item>
+
               <el-menu-item index="/faceRecognition">
                 <el-icon>
                   <Cherry/>
                 </el-icon>
                 人脸识别
               </el-menu-item>
+
               <el-menu-item index="/faceStream">
                 <el-icon :size='20'>
                   <Opportunity/>
                 </el-icon>
                 视频流识别
               </el-menu-item>
+
             </el-menu-item-group>
           </el-submenu>
         </el-menu>

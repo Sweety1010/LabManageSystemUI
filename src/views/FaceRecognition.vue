@@ -60,7 +60,6 @@
                     <div>
                       <p>姓名: {{ item.name }}</p>
                       <p>性别: {{ item.sex }}</p>
-                      <p>年级: {{ item.grade }}</p>
                       <p>工位: {{ item.desk }}</p>
                       <p>省份: {{ item.province }}</p>
                     </div>
@@ -75,20 +74,10 @@
               </div>
             </div>
           </div>
-        
         </div>
-
-
-
       </el-main>
-
       <el-footer>
-
-
-
       </el-footer>
-
-
     </el-container>
   </div>
 </template>

@@ -21,6 +21,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/faceStream',
         component: () =>import("@/views/FaceStream.vue")
+    },
+    {
+        path: '/studentInfoEdit',
+        component: () =>import("@/views/StudentInfoEdit.vue") 
     }
 ]
 
